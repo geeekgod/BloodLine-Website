@@ -31,6 +31,10 @@ background-color:#DE2A26;
     color:white;
     font-weight:400;
     text-align:center;
+    border:3px solid #fff;
+    border-radius:5px;
+    padding:.6rem;
+
   
     `
 
