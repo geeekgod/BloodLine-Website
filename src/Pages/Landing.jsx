@@ -2,6 +2,8 @@ import { CircularProgress } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { memo, Suspense } from "react";
 import { beforeHomeObj } from "../Components/LandingPg/Data";
+import { serviceItem } from "../Components/Services/Data";
+
 const LandingPg = React.lazy(() =>
   import("../Components/LandingPg")
 );
@@ -9,9 +11,9 @@ const NavbarBefore = React.lazy(() =>
   import("../Components/Navbar")
 );
 
-// const Categories = React.lazy(() =>
-//   import("../Components/BeforeLogin/Categories")
-// );
+const Services = React.lazy(() =>
+  import("../Components/Services")
+);
 const LandingCTA = React.lazy(() =>
   import("../Components/LandingCTA")
 );
@@ -37,7 +39,7 @@ const Landing = ({ matches }) => {
       >
         <NavbarBefore matches={matches} />
         <LandingPg {...beforeHomeObj} />
-        {/* <Categories /> */}
+        <Services serviceItem={serviceItem}/>
         <LandingCTA />
         {/* <Footer /> */}
       </Suspense>
