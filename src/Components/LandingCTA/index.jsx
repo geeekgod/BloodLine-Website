@@ -1,6 +1,7 @@
 import { Stack } from "@mui/material";
 import React, { memo } from "react";
 import { Link } from "react-router-dom";
+
 import CtaButton from "../Main/CtaButtons";
 
 import {
@@ -9,6 +10,7 @@ import {
   Heading,
   Small,
   BtnWrapper,
+  Title,
 } from "./LandingCTAElements";
 
 const LandingCTA = () => {
@@ -17,20 +19,13 @@ const LandingCTA = () => {
       <LandingContainer>
         <LandingWrapper>
           <Heading>
-            Join HustleBee to unleash the world’s untapped human potential
+             Download BloodLine today on Appstore 
           </Heading>
           <BtnWrapper>
             <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
-              <Link to="/signup">
-              <CtaButton primary={true} dark={true} white={true}>
-                Hire a Bee
-              </CtaButton>
-              </Link>
-           
-              <Small>OR</Small>
-              <Link to="/signup">
-              <CtaButton white={true}> Apply as a Bee</CtaButton>
-              </Link>
+            
+          <Title>Available on Anroid Devices</Title> 
+              
             
             </Stack>
           </BtnWrapper>

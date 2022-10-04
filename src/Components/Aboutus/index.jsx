@@ -2,7 +2,7 @@ import { Box, Container, Grid, Link, Typography } from "@mui/material";
 import React from "react";
 import TeamCards from "../../Components/Cards";
 import rishabh from "../../assets/img/rishabh.jpg";
-// import shreyaImg from "../../assets/img/";
+import shreya_5 from "../../assets/img/shreya_5.jpeg"
 import aditi from "../../assets/img/aditi.jpeg";
 import { Link as Rlink } from "react-router-dom";
 
@@ -16,7 +16,7 @@ const data = [
   },
   {
     name: "Shreya Shet",
-    // img: shreyaImg,
+    img: shreya_5,
     position: "Front-End Developer",
     linkedIn: "https://www.linkedin.com/in/shreyaa-shet/",
     gitHub: "https://github.com/shreyaaashet",
@@ -49,10 +49,10 @@ const AboutUs = () => {
         BloodLine Developers
       </Typography>
       <Container>
-        <Grid container spacing={2} sx={{ justifyContent: "center" }}>
+        <Grid container spacing={2} sx={{ justifyContent: "space-evenly" }}>
           {data &&
             data.map((item, index) => (
-              <Grid item key={index} md={4}>
+              <Grid item key={index} md={5}>
                 <TeamCards item={item} />
               </Grid>
             ))}

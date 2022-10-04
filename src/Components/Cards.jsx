@@ -11,11 +11,12 @@ const TeamCards = ({ item }) => {
   return (
     <Card
       sx={{
-        maxWidth: 345,
+        maxWidth:300,
         p: 1,
         borderRadius: 10,
         boxShadow:
-          "13px 13px 20px #cbced1, -13px -13px 20px #ffffff !important",
+          " rgba(0, 0, 0, 0.24) 0px 3px 8px; !important",
+          
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -31,13 +32,13 @@ const TeamCards = ({ item }) => {
             src={item.img}
             alt="developer image"
             style={{
-              width: 200,
-              height: 200,
+              width: 150,
+              height: 150,
               borderRadius: "50%",
               margin: "auto",
               filter:
                 item.name === "Shreya Shet"
-                  ? "brightness(1.5)"
+                  ? "brightness(1.3)"
                   : "brightness(1)",
             }}
           />

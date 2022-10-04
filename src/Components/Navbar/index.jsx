@@ -1,6 +1,7 @@
 import React, { memo, useState } from "react";
 import { Toolbar, IconButton, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import icon from "../../assets/img/icon.png";
 
 import DrawerComponent from "./DrawerComponent";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -39,8 +40,8 @@ const Navbar = ({ matches }) => {
             >
               <img
                 style={{ width: "50%" }}
-                // src="/static/img/HustleBee_main.png"
-                alt="hustlebee"
+                src="/src/assets/img/icon.png"
+                alt="BloodLine"
               />
             </Box>
 

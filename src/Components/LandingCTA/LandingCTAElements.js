@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const LandingContainer= styled.div`
 
-background-color: #2667FF;
+background-color:#DE2A26;
  padding: 56px 10px;
  display: flex;
 
@@ -27,6 +27,13 @@ background-color: #2667FF;
   text-align:center;
 
   `
+    export const Title=styled.h3`
+    color:white;
+    font-weight:400;
+    text-align:center;
+  
+    `
+
    export const Small=styled.h5`
    color:white;
    white-space:nowrap;
