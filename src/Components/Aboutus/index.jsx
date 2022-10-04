@@ -4,6 +4,8 @@ import TeamCards from "../../Components/Cards";
 import rishabh from "../../assets/img/rishabh.jpg";
 import shreya_5 from "../../assets/img/shreya_5.jpeg"
 import aditi from "../../assets/img/aditi.jpeg";
+import sumit from "../../assets/img/sumit.jpeg";
+
 import { Link as Rlink } from "react-router-dom";
 
 const data = [
@@ -30,10 +32,10 @@ const data = [
   },
   {
     name: "Sumitkumar Thakur",
-    // img: ,
+    img:sumit ,
     position: "Back-End Developer",
-    linkedIn: "https://www.linkedin.com/in/aditi-thakre-3554a0221/",
-    gitHub: "https://github.com/AditiThakre05",
+    linkedIn: "https://www.linkedin.com/in/sumitkumar-thakur-sla0808/",
+    gitHub: "https://github.com/Sumitkumar-Thakur",
   },
 ];
 
@@ -44,6 +46,8 @@ const AboutUs = () => {
         variant="h5"
         gutterBottom
         component="div"
+        color="#DE2A26"
+        fontWeight={600}
         sx={{ mt: 2, mb: 2, textAlign: "center" }}
       >
         BloodLine Developers
@@ -52,7 +56,7 @@ const AboutUs = () => {
         <Grid container spacing={2} sx={{ justifyContent: "space-evenly" }}>
           {data &&
             data.map((item, index) => (
-              <Grid item key={index} md={5}>
+              <Grid item key={index} md={4} xs={12}>
                 <TeamCards item={item} />
               </Grid>
             ))}
