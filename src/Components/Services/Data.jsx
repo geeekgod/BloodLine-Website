@@ -21,7 +21,7 @@ export const serviceItem = [
     alt: "img",
     serviceH2: "Find People Near you",
     serviceP:
-      "Look for donors,people who can help you",
+      "Look for donors, people who can help you",
   },
   {
     id: 4,
@@ -29,6 +29,6 @@ export const serviceItem = [
     alt: "img",
     serviceH2: "Donate Blood",
     serviceP:
-      "Because you can!Help someone in need",
+      "Because you can! Help someone in need",
   },
 ];
