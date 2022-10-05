@@ -6,12 +6,12 @@ import {
   Cards,
   CategoriesWrapper,
   Content,
-  Icon,
+  Icon, Circle
 } from "./ServicesElements";
 
 // import { categoriesData } from "./data";
 
-const Services = ({serviceItem}) => {
+const Services = ({ serviceItem }) => {
   return (
     <>
       <Boxs id="categories">
@@ -27,20 +27,29 @@ const Services = ({serviceItem}) => {
         >
           Jobs based on your desired category
         </p> */}
-        <h1 style={{ textAlign: "center",color:"#DE2A26" }}>We Promise</h1>
+        <h1 style={{ textAlign: "center", color: "#DE2A26" }}>We Promise</h1>
         <Box>
           <CategoriesWrapper>
             <Cards>
-              {serviceItem&&
-                serviceItem.map((i) => {
-                  return (
-                    <Card key={i.id}>
-                      <Icon src={i.img} alt={i.serviceH2} />
-                      <h2 style={{textAlign:"center"}}>{i.serviceH2}</h2>
-                      <Content>{i.serviceP}</Content>
-                    </Card>
-                  );
-                })}
+
+           
+
+                 {serviceItem &&
+                  serviceItem.map((i) => {
+                    return (
+
+                      <Card key={i.id} >
+                        {/* <img className="circle" alt="cicle" src='/assets/img/Ellipse.png'/> */}
+                             {/* <Circle> */}
+                        <Icon src={i.img} alt={i.serviceH2} />
+                        <h2 style={{ textAlign: "center" }}>{i.serviceH2}</h2>
+                        <Content>{i.serviceP}</Content>
+                         {/* </Circle> */}
+                      </Card>
+
+                    );
+                  })} 
+             
             </Cards>
           </CategoriesWrapper>
         </Box>

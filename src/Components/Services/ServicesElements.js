@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const Boxs = styled.div`
   display: flex;
-  padding: 3rem 10px;
+  padding: 4rem 10px;
   background-color: rgba(0, 0, 0, 0.03);
   flex-direction: column;
   align-items: center;
@@ -27,23 +27,40 @@ export const Cards = styled.div`
 
 export const Card = styled.div`
   margin-top: 1rem;
+  /* position: relative; */
   width: 250px;
-  padding: 35px;
+  padding:2rem;
+
   background-color: white;
   border-radius: 15px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  transition: all ease-in-out 0.6s;
+  transition: all ease-in-out 0.9s;
   cursor: pointer;
   &:hover {
     box-shadow: 1px 1px 20px -9px rgba(222,42,38,1);
 
   }
 `;
+export const Circle=styled.div`
+/* position: absolute; */
+z-index:1;
+
+width: 20px;
+height:20px;
+padding:2rem;
+background-color: rgb(222,42,38);
+border-radius: 50px;
+
+
+
+cursor: pointer;
+
+`;
 
 export const Icon = styled.img`
-  width: 40px;
+  /* width: 40px; */
 `;
 export const Content = styled.div`
   text-align:center;

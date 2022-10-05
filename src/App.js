@@ -1,22 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import Aboutus from './Components/Aboutus';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Landing from './Pages/Landing';
+// import Aboutus from './Components/Aboutus';
+
+import { useMediaQuery, useTheme } from "@mui/material";
+// import Landing from './Pages/Landing';
+import Routerpg from './Components/Routerpg';
 
 function App() {
+    //theme instance
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.down("lg"));
   return (
  <>
- <Router>
-  <Routes>
-    <Route path='/'>
-       <Route index element={<Landing/>}></Route>
-      <Route path='/aboutus' element={<Aboutus/>}></Route>
-    </Route>
-  </Routes>
 
+   
+      <Routerpg matches={matches}/>
+  
 
- </Router>
+  
+
 
 
  </>

@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.circle{
+  width:10rem;
+  height: 10rem;
+  display:flex;
+  /* position: absolute; */
+}

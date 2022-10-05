@@ -1,7 +1,7 @@
 import React, { memo, useState } from "react";
 import { Toolbar, IconButton, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import icon from "../../assets/img/icon.png";
+// import icon from "../../assets/img/icon.png";
 
 import DrawerComponent from "./DrawerComponent";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -26,7 +26,7 @@ const Navbar = ({ matches }) => {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              padding: "20px 10px",
+              padding: "5px 10px",
             }}
             component="div"
           >
@@ -38,11 +38,8 @@ const Navbar = ({ matches }) => {
                 alignItems: "center",
               }}
             >
-              <img
-                style={{ width: "50%" }}
-                src="/src/assets/img/icon.png"
-                alt="BloodLine"
-              />
+              <h3 style={{ width: "60px",height:"60px",color:"rgba(222,42,38,1)",fontWeight:700,fontSize:'35px' }} alt="BloodLine"> BloodLine</h3>
+            
             </Box>
 
             {/* Links */}
@@ -53,16 +50,19 @@ const Navbar = ({ matches }) => {
               />
             ) : (
               <Box sx={{ display: "flex", marginTop: "20px" }}>
+                <Link to='/'>
                 <Typography
                   sx={{
                     marginRight: "20px",
                     cursor: "pointer",
-                    color: "#616161",
+                    color: "rgba(222,42,38,1)",
                     fontSize: "1.2rem",
                   }}
                 >
                   Home
                 </Typography>
+                </Link>
+              
 
                
                 <Link to='/aboutus'>
@@ -70,7 +70,7 @@ const Navbar = ({ matches }) => {
                     sx={{
                       marginRight: "20px",
                       cursor: "pointer",
-                      color: "#616161",
+                      color: "rgba(222,42,38,1)",
                       fontSize: "1.2rem",
                     }}
                     aria-controls="basic-menu"
@@ -78,7 +78,7 @@ const Navbar = ({ matches }) => {
                     aria-expanded={openMenu ? "true" : undefined}
                     onClick={handleClick}
                   >
-                    About-Us
+                    About-us
                   </Typography>
                 </Link>
                <Link to="/contactus">
@@ -86,7 +86,8 @@ const Navbar = ({ matches }) => {
                   sx={{
                     marginRight: "20px",
                     cursor: "pointer",
-                    color: "#616161",
+                    
+                    color: "rgba(222,42,38,1)",
                     fontSize: "1.2rem",
                   }}
                 >
@@ -98,6 +99,19 @@ const Navbar = ({ matches }) => {
             )}
 
             {/* button links */}
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {matches ?(
+                <IconButton size="large" onClick={() => setOpenDrawer(true)}>
+                  <MenuIcon fontSize="inherit" htmlColor="rgba(222,42,38,1)"/>
+                </IconButton>
+              ):null}
+            </Box>
            
           </Box>
         </Toolbar>

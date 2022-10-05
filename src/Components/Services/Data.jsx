@@ -2,14 +2,14 @@ export const serviceItem = [
   {
     id: 1,
 
-    img: "/images/svg-3.svg",
+    img: "/assets/img/first.png",
     alt: "img",
     serviceH2: "Virtual Platform",
     serviceP:"The blood donation platform on which you can rely on",
   },
   {
     id: 2,
-    img: "/images/svg-4.svg",
+    img: "/assets/img/second.png",
     alt: "img",
     serviceH2: "Completely Free",
     serviceP:
@@ -17,7 +17,7 @@ export const serviceItem = [
   },
   {
     id: 3,
-    img: "/images/svg-5.svg",
+    img: "/assets/img/third.png",
     alt: "img",
     serviceH2: "Find People Near you",
     serviceP:
@@ -25,7 +25,7 @@ export const serviceItem = [
   },
   {
     id: 4,
-    img: "/images/svg-5.svg",
+    img: "/assets/img/fourth.png",
     alt: "img",
     serviceH2: "Donate Blood",
     serviceP:

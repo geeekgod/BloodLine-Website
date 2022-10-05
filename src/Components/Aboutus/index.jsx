@@ -52,7 +52,7 @@ const AboutUs = () => {
       >
         BloodLine Developers
       </Typography>
-      <Container>
+      <Container sx={{display:"flex",justifyContent:"center",alignItems:"center"}}>
         <Grid container spacing={2} sx={{ justifyContent: "space-evenly" }}>
           {data &&
             data.map((item, index) => (
@@ -61,11 +61,7 @@ const AboutUs = () => {
               </Grid>
             ))}
         </Grid>
-        {/* <Box sx={{ p: 2 }}>
-          <Rlink style={{ marginTop: "10px", padding: 2 }} to="/">
-            <Link>Go back</Link>
-          </Rlink>
-        </Box> */}
+       
       </Container>
     </Box>
   );

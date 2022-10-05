@@ -6,7 +6,7 @@ export const beforeHomeObj = {
   description:
     "Looking for an opportunity to work? or Looking for talented people to work for you? You're at the right place. Find Bees (Talented hardworking people) or look for talent hunters to work with.",
   buttonLabel: "Get Started",
-  imgStart: false,
-  // img: "",
-  alt: "car",
+  imgStart:false,
+    alt: "landing image",
+  img: "/assets/img/home.png",
 };

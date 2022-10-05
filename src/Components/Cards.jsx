@@ -26,6 +26,7 @@ const TeamCards = ({ item }) => {
             width: 200,
             borderRadius: "50%",
             justifyContent: "center",
+            alignItems:"center",
           }}
         >
           <img
