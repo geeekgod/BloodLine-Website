@@ -42,7 +42,7 @@ const Services = ({ serviceItem }) => {
                         {/* <img className="circle" alt="cicle" src='/assets/img/Ellipse.png'/> */}
                              {/* <Circle> */}
                         <Icon src={i.img} alt={i.serviceH2} />
-                        <h2 style={{ textAlign: "center" }}>{i.serviceH2}</h2>
+                        <h2 style={{ textAlign: "center",marginRight:"2rem" }}>{i.serviceH2}</h2>
                         <Content>{i.serviceP}</Content>
                          {/* </Circle> */}
                       </Card>

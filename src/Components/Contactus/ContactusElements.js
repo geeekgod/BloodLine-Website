@@ -5,11 +5,12 @@ export const ContactUswrapper = styled.div`
   height:100%;
   display:flex;
   justify-content:center;
+  margin-top:5rem;
   align-items:center;
-  background-color: #2667FF;
+  /* background-color:#DE2A26; */
   flex-direction:column;
   color:#fff;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `;

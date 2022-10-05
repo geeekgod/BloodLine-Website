@@ -13,11 +13,17 @@ const TeamCards = ({ item }) => {
       sx={{
         maxWidth:300,
         p: 1,
-        borderRadius: 10,
+        borderRadius:3,
         boxShadow:
           " rgba(0, 0, 0, 0.24) 0px 3px 8px; !important",
+          transitionProperty:'box-shadow transform',
+          transitionDuration:'350ms',
+          transitionTimingFunction:'ease',
+        
+
           
       }}
+      
     >
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Box
@@ -33,8 +39,8 @@ const TeamCards = ({ item }) => {
             src={item.img}
             alt="developer image"
             style={{
-              width: 150,
-              height: 150,
+              width: 130,
+              height: 130,
               borderRadius: "50%",
               margin: "auto",
               filter:

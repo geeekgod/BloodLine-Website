@@ -4,14 +4,15 @@ import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import CustomBtn from "../../Components/BeforeLogin/Main/CustomBtn";
-import emailjs from "emailjs-com";
+import CustomBtn from "../Main/CustomBtn";
+// import emailjs from "emailjs-com";
 
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import { SignInContainer } from "../SignIn/SignInElements";
+// import { SignInContainer } from "../SignIn/SignInElements";
 import CircularProgress from "@mui/material/CircularProgress";
 import Alert from "@mui/material/Alert";
 import { ContactUswrapper } from "./ContactusElements";
+import CtaButton from './../Main/CtaButtons/index';
 
 const ContactUs = () => {
   const theme = useTheme();
@@ -23,6 +24,8 @@ const ContactUs = () => {
   const [msg, setMsg] = useState("");
   const [name, setName] = useState("");
   const [subject, setSubject] = useState("");
+
+
   useEffect(() => {
     setMsg("");
     if (!/\S+@\S+\.\S+/.test(email.trim()) || message.trim().length < 5) {
@@ -38,25 +41,13 @@ const ContactUs = () => {
   const _handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-    if (!errs) {
-      emailjs
-        .sendForm("gmail", "template_t3zl56g", e.target, "ZtFHM7VqW-A6lzmlt")
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-    }
-    e.target.reset();
+      
   };
 
   return (
     <>
-      <Box id='contactus'>
-        <SignInContainer>
+      <Box id='contactus' sx={{display:"flex",flexDirection:"row"}}>
+    
           <Grid
             sx={{
               display: "flex",
@@ -79,6 +70,7 @@ const ContactUs = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   marginBottom: 2,
+                  marginTop:5,
                 }}
               >
                 <Typography component='h2' variant='h4'>
@@ -172,13 +164,13 @@ const ContactUs = () => {
                   {msg && msg === "Login Succeeded!" ? (
                     <Alert severity='success'>Login Successful!</Alert>
                   ) : null}
-                  <CustomBtn type='submit' fullWidth sx={{ mt: 3, mb: 2 }}>
+                  <CtaButton type='submit' fullWidth sx={{ mt: 3, mb: 2 }}>
                     {submitted && !errs ? (
                       <CircularProgress size={24} color='inherit' />
                     ) : (
                       "Submit"
                     )}
-                  </CustomBtn>
+                  </CtaButton>
                 </Box>
               </Box>
             </Container>
@@ -186,12 +178,13 @@ const ContactUs = () => {
           {/* </Box> */}
           <ContactUswrapper>
             <img
-              src='/static/img/Contactus-amico.png'
-              style={{ width: "60%" }}
+              src='/assets/img/contact.png'
+              style={{ width: "100%" }}
               alt='Contact Us'
+              
             />
           </ContactUswrapper>
-        </SignInContainer>
+    
       </Box>
     </>
   );

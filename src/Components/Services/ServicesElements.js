@@ -28,9 +28,9 @@ export const Cards = styled.div`
 export const Card = styled.div`
   margin-top: 1rem;
   /* position: relative; */
-  width: 250px;
-  padding:2rem;
-
+  width: 240px;
+  padding-bottom:2rem;
+  padding-left:2rem;
   background-color: white;
   border-radius: 15px;
   display: flex;
@@ -60,9 +60,12 @@ cursor: pointer;
 `;
 
 export const Icon = styled.img`
-  /* width: 40px; */
+  width:15rem;
+  height:15rem;
+  border-top-right-radius:15px;
 `;
 export const Content = styled.div`
   text-align:center;
+  margin-right:2rem;
   color:#7A7A7A;
 `;
