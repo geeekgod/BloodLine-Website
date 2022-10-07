@@ -1,10 +1,10 @@
 export const beforeHomeObj = {
   id: "home",
 
-  topLine: "Grab your dream job with HustleBee",
-  headLine: "Be the top hustling bee for recruiters",
+  topLine: "Not every hero wears a cape",
+  headLine: "Start by donating blood",
   description:
-    "Looking for an opportunity to work? or Looking for talented people to work for you? You're at the right place. Find Bees (Talented hardworking people) or look for talent hunters to work with.",
+    "Want to help people in need  by donating blood? BloodLine is the reliable platform. Join us today",
   buttonLabel: "Get Started",
   imgStart:false,
     alt: "landing image",

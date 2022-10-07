@@ -34,13 +34,13 @@ const DrawerComponent = ({ openDrawer, setOpenDrawer }) => {
         </ListItem>
         </Link>
        
-        <ListItem divider  onClick={() => setOpenDrawer(false)}>
+        {/* <ListItem divider  onClick={() => setOpenDrawer(false)}>
           
           <ListItemIcon sx={{ px: 5 }}>
             <ListItemText>Contact</ListItemText>
           </ListItemIcon>
           
-        </ListItem>
+        </ListItem> */}
         {/* buttons */}
        
       </List>

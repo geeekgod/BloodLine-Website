@@ -72,7 +72,7 @@ const TeamCards = ({ item }) => {
       <CardActions sx={{ justifyContent: "center !important" }}>
         <IconButton
           sx={{ m: "0 !important" }}
-          color="primary"
+          color="error"
           href={item.linkedIn}
           target="_blank"
           size="large"
@@ -81,7 +81,7 @@ const TeamCards = ({ item }) => {
         </IconButton>
         <IconButton
           sx={{ m: "0 !important" }}
-          color="primary"
+          color="error"
           href={item.gitHub}
           target="_blank"
           size="large"

@@ -81,7 +81,7 @@ const Navbar = ({ matches }) => {
                     About-us
                   </Typography>
                 </Link>
-               <Link to="/contactus">
+               {/* <Link to="/contactus">
                <Typography
                   sx={{
                     marginRight: "20px",
@@ -93,7 +93,7 @@ const Navbar = ({ matches }) => {
                 >
                   Contact
                 </Typography>
-               </Link>
+               </Link> */}
              
               </Box>
             )}
