@@ -19,12 +19,13 @@ const LandingCTA = () => {
       <LandingContainer>
         <LandingWrapper>
           <Heading>
-             Download BloodLine today on Appstore 
+            Get BloodLine today on Appstore 
           </Heading>
+            
           <BtnWrapper>
             <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
             
-          <Title>Available on Anroid Devices</Title> 
+          <Title> or Download the apk </Title> 
               
             
             </Stack>
