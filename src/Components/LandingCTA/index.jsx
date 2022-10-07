@@ -9,6 +9,7 @@ import {
   LandingWrapper,
   Heading,
   Small,
+
   BtnWrapper,
   Title,
 } from "./LandingCTAElements";
@@ -21,11 +22,13 @@ const LandingCTA = () => {
           <Heading>
             Get BloodLine today on Appstore 
           </Heading>
-            
+            <Heading>
+            or
+            </Heading>
           <BtnWrapper>
             <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
             
-          <Title> or Download the apk </Title> 
+          <Title>Download the apk </Title> 
               
             
             </Stack>

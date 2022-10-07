@@ -3,11 +3,33 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createTheme, ThemeProvider } from '@mui/material';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#DE2A26",
+      dark: "#DE2A26",
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      800: 800,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 
