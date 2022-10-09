@@ -27,6 +27,7 @@ background-color:#DE2A26;
   text-align:center;
 
   `
+  
     export const Title=styled.h3`
     color:white;
     font-weight:400;

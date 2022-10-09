@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import CustomBtn from "../Main/CustomBtn";
-// import emailjs from "emailjs-com";
+
 
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 // import { SignInContainer } from "../SignIn/SignInElements";
@@ -13,8 +13,10 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Alert from "@mui/material/Alert";
 import { ContactUswrapper } from "./ContactusElements";
 import CtaButton from './../Main/CtaButtons/index';
+import { emailjs } from 'emailjs-com';
 
 const ContactUs = () => {
+  document.title = "Contact-us | BloodLine"
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("800"));
   const [email, setEmail] = useState("");
@@ -37,12 +39,26 @@ const ContactUs = () => {
       setSubmitted(false);
     }
   }, [email, message, errs, submitted]);
+  
 
   const _handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-      
+    if (!errs) {
+      emailjs
+        .sendForm("gmail", "service_7kotkqa", e.target, "template_nj8bi5f")
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
+    e.target.reset();
   };
+
 
   return (
     <>
@@ -155,6 +171,7 @@ const ContactUs = () => {
                         : null
                     }
                   />
+
                   {submitted && errs ? (
                     <Alert severity='error'>
                       Please check your fields carefully.
@@ -164,7 +181,7 @@ const ContactUs = () => {
                   {msg && msg === "Login Succeeded!" ? (
                     <Alert severity='success'>Login Successful!</Alert>
                   ) : null}
-                  <CtaButton type='submit' fullWidth sx={{ mt: 3, mb: 2 }}>
+                  <CtaButton type='submit' onClick={_handleSubmit} fullWidth sx={{ mt: 3, mb: 2 }}>
                     {submitted && !errs ? (
                       <CircularProgress size={24} color='inherit' />
                     ) : (

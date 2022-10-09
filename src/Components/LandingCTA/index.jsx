@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import React, { memo } from "react";
 import { Link } from "react-router-dom";
 
@@ -22,9 +22,9 @@ const LandingCTA = () => {
           <Heading>
             Get BloodLine today on Appstore 
           </Heading>
-            <Heading>
+            <Typography sx={{color:"#fff",textAlign:'center', fontSize:25,fontWeight:600}}>
             or
-            </Heading>
+            </Typography>
           <BtnWrapper>
             <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
             

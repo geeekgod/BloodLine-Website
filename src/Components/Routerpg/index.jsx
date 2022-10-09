@@ -12,7 +12,7 @@ const Routerpg = ({matches} ) => {
         <Route index path='/' element={<Landing matches={matches} />}/>
 
         <Route path='/aboutus' element={<AboutUs matches={matches} />}/>
-        {/* <Route path='/contactus' element={<ContactUs matches={matches} />}/> */}
+        <Route path='/contactus' element={<ContactUs matches={matches} />}/>
 
    
       </Routes>

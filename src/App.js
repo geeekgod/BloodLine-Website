@@ -5,6 +5,7 @@ import './App.css';
 import { useMediaQuery, useTheme } from "@mui/material";
 // import Landing from './Pages/Landing';
 import Routerpg from './Components/Routerpg';
+// import Navbar from './Components/Navbar';
 
 function App() {
     //theme instance
@@ -13,7 +14,7 @@ function App() {
   return (
  <>
 
-   
+        
       <Routerpg matches={matches}/>
   
 
