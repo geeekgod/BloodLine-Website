@@ -1,5 +1,5 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -13,7 +13,8 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Alert from "@mui/material/Alert";
 import { ContactUswrapper } from "./ContactusElements";
 import CtaButton from './../Main/CtaButtons/index';
-import { emailjs } from 'emailjs-com';
+import emailjs from '@emailjs/browser';
+
 
 const ContactUs = () => {
   document.title = "Contact-us | BloodLine"
@@ -27,6 +28,7 @@ const ContactUs = () => {
   const [name, setName] = useState("");
   const [subject, setSubject] = useState("");
 
+  const form = useRef();
 
   useEffect(() => {
     setMsg("");
@@ -40,13 +42,18 @@ const ContactUs = () => {
     }
   }, [email, message, errs, submitted]);
   
+  let templateParams = {
+    from_name: email,
+    to_name: '<YOUR_EMAIL_ID>',
+    subject: subject,
+    message_html: message,
+}
 
   const _handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
     if (!errs) {
-      emailjs
-        .sendForm("gmail", "service_7kotkqa", e.target, "template_nj8bi5f")
+      emailjs.sendForm('gmail',"service_7kotkqa", "template_nj8bi5f",e.target,templateParams)
         .then(
           (result) => {
             console.log(result.text);
@@ -62,7 +69,7 @@ const ContactUs = () => {
 
   return (
     <>
-      <Box id='contactus' sx={{display:"flex",flexDirection:"row"}}>
+      <Box ref={form} id='contactus' sx={{display:"flex",flexDirection:"row"}}>
     
           <Grid
             sx={{
