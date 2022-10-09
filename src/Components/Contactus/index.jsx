@@ -28,7 +28,7 @@ const ContactUs = () => {
   const [name, setName] = useState("");
   const [subject, setSubject] = useState("");
 
-  const form = useRef();
+
 
   useEffect(() => {
     setMsg("");
@@ -42,28 +42,28 @@ const ContactUs = () => {
     }
   }, [email, message, errs, submitted]);
   
-  let templateParams = {
+ const  templateParams = {
     from_name: email,
-    to_name: '<YOUR_EMAIL_ID>',
+    // to_name: <YOUR_EMAIL_ID>,
     subject: subject,
     message_html: message,
 }
+const form = useRef();
 
   const _handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
     if (!errs) {
-      emailjs.sendForm('gmail',"service_7kotkqa", "template_nj8bi5f",e.target,templateParams)
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
+   emailjs.sendForm('service_7kotkqa', 'template_nj8bi5f',form.current,templateParams, 'RJOytg4UJUUQ7xdv5')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
     }
+    console.log(form.current)
     e.target.reset();
+
   };
 
 
